@@ -16,7 +16,8 @@ const nextScoreElem = document.querySelector("[data-next-score]")
 
 setPixelToWorldScale()
 window.addEventListener("resize", setPixelToWorldScale)
-document.addEventListener("keydown", handleStart, { once: true })
+//document.addEventListener("keydown", handleStart, { once: true })
+document.addEventListener("click", handleStart, { once: true })
 
 let lastTime
 let speedScale
@@ -87,7 +88,8 @@ function handleLose() {
   }
 
   setTimeout(() => {
-    document.addEventListener("keydown", handleStart, { once: true })
+    //document.addEventListener("keydown", handleStart, { once: true })
+    document.addEventListener("click", handleStart, { once: true })
     startScreenElem.classList.remove("hide")
   }, 100)
 }
